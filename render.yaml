@@ -1,5 +1,5 @@
 services:
   - type: web
-    name: Gems
+    name: 1v1lol
     env: static
     staticPublishPath: .
