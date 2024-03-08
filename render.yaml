@@ -1,5 +1,5 @@
 services:
   - type: web
-    name: 1v1lol
+    name: Menu-Games-LTE+
     env: static
     staticPublishPath: .
