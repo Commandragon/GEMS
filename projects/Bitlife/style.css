@@ -8,6 +8,7 @@ body {
         height: 100%;
         width: 100%;
         background-size: cover;
+        background-color: #111;
         font-style: regular;
         font-family: "Myriad Pro", Myriad, "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
