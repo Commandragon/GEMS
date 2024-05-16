@@ -1,5 +1,10 @@
 [
     {
+    "link": "projects/Bitlife/index.html",
+    "imgSrc": "projects/Bitlife/logo.png",
+    "title": "Bitlife"
+  },
+    {
     "link": "projects/scratch/index.html",
     "imgSrc": "projects/scratch/625810715_480x360.png",
     "title": "scratch"
