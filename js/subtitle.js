@@ -1,13 +1,5 @@
 function getRandomGreeting() {
   var greetings = [
-   "Why did it take me so long to change this?",
-    "Should I add more of these?",
-  "does anyone go on the about section?",
-  "skibidi bob bob yes yes",
-    "this is going to get repeditive really fast",
-    "100% no AI generated 100% AI spell checked",
-    "if you see this you are probably not sigma",
-    "Alright I am using AI to generate these this is gonna take way to long",
     "Sigma grindset unlocked: Finished homework while jamming to Skibidi. Efficiency achieved, even if the lyrics are stuck on repeat.",
 "Does anyone else get the sudden urge to yell 'SKIBIDI PAPA!' at random? Asking for a friend. Skibidi fever is contagious in Ohio! Anyone have the cure (or more Skibidi?)",
 "Just witnessed peak sigma behavior (or maybe peak meme culture?): Someone used a toilet brush as a mic for Skibidi karaoke. Ohio edition.",
