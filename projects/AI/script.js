@@ -1,7 +1,10 @@
-document.getElementById('jd').onclick = ()=>{
-  window.open('https://discord.gg/ju4yQBfQ7p')
-}
+document.getElementById("jd").onclick = function() {
+  window.location.href = "https://kingnish-instant-video.hf.space/?__theme=dark";
+};
 
+document.getElementById("ijuh").onclick = function() {
+  window.location.href = "https://leevewastaken-best-images-overall.hf.space/?__theme=dark";
+};
 
 /*document.getElementById('ow').onclick = ()=>{
   window.open('https://www.buymeacoffee.com/mygx')
