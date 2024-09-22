@@ -1,9 +1,4 @@
 [
-        {
-    "link": "projects/AI/index.html",
-    "imgSrc": "projects/AI/unnamed.png",
-    "title": "Image Generator"
-  },
     {
     "link": "projects/Bitlife/index.html",
     "imgSrc": "projects/Bitlife/logo.png",
@@ -58,6 +53,11 @@
     "link": "projects/basketball-stars/index.html",
     "imgSrc": "projects/basketball-stars/assets/images/basketball-stars.png",
     "title": "Basketball Stars"
+  },
+  {
+    "link": "projects/3kh0-assets-main-roblox/3kh0-assets-main-roblox/roblox/index.html",
+    "imgSrc": "projects/3kh0-assets-main-roblox/3kh0-assets-main-roblox/roblox/splash.png",
+    "title": "Roblox"
   },
   {
     "link": "projects/battleforgondor/index.html",
