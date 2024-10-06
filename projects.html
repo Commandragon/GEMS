@@ -23,6 +23,7 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="shortcut-icon" href="/favicon.ico" />
     <script src="/js/main.js"></script>
+    <script src="/js/misc.js"></script>
     <style>
       p {
         text-align: center;
@@ -85,21 +86,42 @@
           transform: rotate(360deg);
         }
       }
+      body.light-mode {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
     </style>
   </head>
-  <body style="background-color: #121212; color: #ffffff; font-family: sans-serif; text-decoration: none; text-align: center;">
+  <body class="dark-mode" style="font-family: sans-serif; text-decoration: none; text-align: center;">
     <h1 style="font-size: 3em; text-align: center;">Projects</h1>
+
+    <!-- Dark Mode Toggle -->
+    <button onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px;">Toggle Dark Mode</button>
+
+    <!-- Social Sharing Buttons -->
+    <div style="margin-top: 20px;">
+      <button onclick="shareOnTwitter()">Share on Twitter</button>
+      <button onclick="shareOnFacebook()">Share on Facebook</button>
+    </div>
+
     <input type="text" id="search" onkeyup="searchGames()" placeholder="Search for games..." style="width: 100%; font-size: 18px; padding: 6px 20px; margin: auto; border-radius: 30px; max-width: 600px; margin-bottom: 10px;" />
     <div id="loader" style="display: block; border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 2s linear infinite; margin: auto; margin-top: 1rem;"></div>
     <div id="game-container" class="flex-container"></div>
+
+    <!-- Go to homepage -->
     <p class="text-center">
       <a href="/index.html" style="text-decoration: none;">
-        <button style="cursor: pointer; background-color: #b625cc; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 20px; margin-top: 5px;">
-          Go to the homepage
-        </button>
+        <button style="background-color: #b625cc;">Go to the homepage</button>
       </a>
     </p>
+
+    <!-- Back to top button -->
     <button id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">Back to top</button>
+
     <script>
       let games = [];
       fetch("config/games.json")
@@ -127,9 +149,12 @@
         const filter = input.value.toUpperCase();
         const container = document.getElementById("game-container");
         container.innerHTML = "";
-        games
-          .filter((game) => game.title.toUpperCase().includes(filter))
-          .forEach((project) => {
+        const filteredGames = games.filter((game) => game.title.toUpperCase().includes(filter));
+
+        if (filteredGames.length === 0) {
+          container.innerHTML = "<p>No games found!</p>";
+        } else {
+          filteredGames.forEach((project) => {
             const game = document.createElement("a");
             game.href = project.link;
             game.className = "game-link container";
@@ -141,19 +166,35 @@
             container.appendChild(game);
           });
         }
-        const backToTopButton = document.getElementById('back-to-top');
-        window.onscroll = function () {
-          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopButton.style.display = "block";
-          } else {
+      }
+
+      const backToTopButton = document.getElementById('back-to-top');
+      window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          backToTopButton.style.display = "block";
+        } else {
           backToTopButton.style.display = "none";
         }
       };
 
       backToTopButton.onclick = function () {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: "smooth" });
       };
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode");
+      }
+
+      function shareOnTwitter() {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://twitter.com/share?url=${url}`, "_blank");
+      }
+
+      function shareOnFacebook() {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+      }
     </script>
   </body>
 </html>
