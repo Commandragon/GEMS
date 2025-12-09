@@ -1,9 +1,4 @@
 [
-        {
-    "link": "projects/AI/index.html",
-    "imgSrc": "projects/AI/unnamed.png",
-    "title": "Image Generator"
-  },
     {
     "link": "projects/Bitlife/index.html",
     "imgSrc": "projects/Bitlife/logo.png",
@@ -13,11 +8,6 @@
     "link": "projects/scratch/index.html",
     "imgSrc": "projects/scratch/625810715_480x360.png",
     "title": "scratch"
-  },
-  {
-    "link": "projects/1v1lol/index.html",
-    "imgSrc": "projects/1v1lol/splash.png",
-    "title": "1v1lol"
   },
   {
     "link": "projects/1v1space/index.html",
